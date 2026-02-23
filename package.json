@@ -1,0 +1,34 @@
+{
+  "name": "figma-mcp",
+  "description": "Figma MCP - Connect Claude/Cursor to Figma via WebSocket",
+  "version": "0.1.0",
+  "module": "dist/server.js",
+  "main": "dist/server.js",
+  "bin": {
+    "figma-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "bun run dist/server.js",
+    "socket": "bun run src/mcp_server/socket.ts",
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "dev": "bun run build:watch"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "bun-types": "^1.2.5",
+    "tsup": "^8.4.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "uuid": "latest",
+    "ws": "latest",
+    "zod": "latest"
+  }
+}
