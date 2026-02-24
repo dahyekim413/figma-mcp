@@ -1,0 +1,19 @@
+{
+  "name": "Figma MCP Plugin",
+  "id": "figma-mcp-plugin",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma", "figjam"],
+  "permissions": [],
+  "networkAccess": {
+    "allowedDomains": [],
+    "devAllowedDomains": [
+      "http://localhost:3055",
+      "ws://localhost:3055"
+    ]
+  },
+  "documentAccess": "dynamic-page",
+  "enableProposedApi": true,
+  "enablePrivatePluginApi": true
+}
